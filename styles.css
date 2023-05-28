@@ -1,14 +1,25 @@
 * {
   padding: 0px;
-  margin: 35px;
   background: #DDD0C8;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+ 
+}
 
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* You may need to adjust this depending on your layout */
+  /* rest of your styles */
+  padding: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+header {
+  height: 250px;
 }
 
 .top ul {
   list-style: none;
-  background: #DDD0C8;
   font-size: 25px;
 }
 
@@ -17,13 +28,58 @@
 }
 
 .top a {
+  padding-top: 10px;
   text-decoration: none;
   color: #000;
-  background-color: #DDD0C8;
   width: 100px;
   padding: 23px;
   text-transform: uppercase;
   font-weight: bold;
+  border-radius: 25px;
+}
+#primary li a {
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  font-family: 'Open Sans';
+  font-size: 26px;
+  line-height: 1;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #4cdb88, #20ad77 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;  /* Top/bottom padding of 10px, left/right padding of 20px */
+
+  /* Or adjust width */
+  width: 150px;
+}
+
+#primary li a:before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  bottom: 5px;
+  left: 0;
+  bottom: -3px;
+  z-index: 0;
+  position: absolute;
+  background: hsl(157, 69%, 40%);
+  transition: all 0.3s ease-in-out;
+}
+
+#primary li a:hover {
+  background-position: 0%;
+}
+
+#primary li a:hover:before {
+  width: 100%;
 }
 
 .Intro {
@@ -32,24 +88,31 @@
   margin: 20px;
   text-align: left;
   border-radius: 10px;
+  margin-top: 70px;
+  width: ;
 }
-
 
 /*Intro section*/
 .Intro h1 {
-  font-size: 75px;
+  font-size: 80px;
   padding-bottom: 10px;
+  transform: translateY(-110px);
+  width: 100%;
 }
 
 .Intro p {
-  font-size: 45px;
+  font-size: 37px;
   color: gray;
-  margin-bottom: 10px;
+  width: 400px;
+  transform: translateY(-390px);
+  padding-left: 10px;
 }
 
 .profile {
   display: flex;
   align-items: center;
+  position: relative;
+
 }
 
 .profile img {
@@ -60,41 +123,63 @@
   width: 400px;
   height: 400px;
   clip-path: circle();
+  transform: translateY(-100px);
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 44%;
+  left: 60px;
+  transform: translateY(10px);
+  padding-left: 50px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 150px;
+}
+
 
 
 /*Bio section*/
 .Hero {
   padding: 4%;
   margin-top: 13%;
-  border-bottom: 2px solid #321c20;
-  border-top: 2px solid #321c20;
+  border-bottom: 2px solid hsl(157, 69%, 40%);
+  border-top: 2px solid hsl(157, 69%, 40%);
   min-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #C9B9B2;
+  line-height: 2; /* Increase line spacing */
 }
 
 .Hero h2 {
-  font-size: 50px;
+  font-size: 60px; /* Increase font size */
   padding-bottom: 20px;
   background-color: #C9B9B2;
 }
 
 .Hero p {
-  font-size: 20px;
+  font-size: 24px; /* Increase font size */
   background-color: #C9B9B2;
   text-align: center;
 }
+
 
 
 /*Project section*/
 .Projects {
   padding: 4%;
   margin-top: 10%;
-  border-bottom: 2px solid #321c20;
-  border-top: 2px solid #321c20;
+  border-bottom: 2px solid hsl(157, 69%, 40%);
+  border-top: 2px solid hsl(157, 69%, 40%);
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -125,11 +210,12 @@
 .container {
   position: relative;
 }
+
 .view-project-button {
   display: inline-block;
   padding: 10px 20px;
   color: #FFF;
-  background-color: #321c20;
+  background-color: hsl(157, 69%, 40%);
   text-decoration: none;
   border-radius: 5px;
   border: none;
@@ -167,16 +253,16 @@ h3 {
 }
 
 button {
-  background-color: #321c20;
+  background-color: hsl(157, 69%, 40%);
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-
   font-size: 16px;
   margin-top: 20px;
 }
+
 
 
 /*Contact section*/
@@ -192,23 +278,23 @@ button {
   border-radius: 12px;
 }
 
-.Contact h2{
-  margin:auto;
+.Contact h2 {
+  margin: auto;
   width: 50%;
   padding-bottom: 40%;
   font-size: 50px;
   padding-bottom: 20px;
 }
 
-.Contact p{
+.Contact p {
   margin: auto;
   width: fit-content;
   font-size: 30px;
   display: block;
 }
 
-.Contact a{
-  background-color:#321c20;
+.Contact a {
+  background-color: hsl(157, 69%, 40%);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -255,7 +341,7 @@ button {
     float: left;
     display: inline;
     align-items: center;
-     text-align: center;
+    text-align: center;
   }
 }
 
@@ -264,63 +350,9 @@ button {
 
   .Intro,
   .Hero,
-  .top 
-  .contact{
+  .top .Contact {
     padding: 3%;
     margin: 1%;
     align-items: center;
   }
 }
-
-.Intro h1 {
-  font-size: 50px;
-}
-
-.Intro p {
-  font-size: 45px;
-}
-
-.Hero h2 {
-  font-size: 75px;
-  padding-bottom: 30px;
-}
-
-.Hero p {
-  font-size: 30px;
-}
-
-
-
-.Contact h2{
-  margin:auto;
-  width: 50%;
-  padding-bottom: 40%;
-  font-size: 50px;
-  padding-bottom: 20px;
-  text-align: center;
- 
-}
-
-.Contact a {
-  background-color:#321c20;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-}
-
-a.top {
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  background-color: #5e4450;
-  position:relative;
-  color: white;
-  text-align: center;
-  font-size: 25px;
-}
-
