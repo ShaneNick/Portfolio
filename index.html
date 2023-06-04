@@ -18,7 +18,19 @@
                   <li><a href = "#Contact">Contact</a></li>
                 </ul>
               </nav>
-      
+              <button onclick="myFunction()" style="display:none" id="dropdownButton">☰</button>
+          
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("primary");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+                }
+              </script>
+              
              
             <!--Intro to myself-->
             <section class="Intro">
@@ -31,8 +43,8 @@
               </div>
               <p>Junior Software developer</p>
               <div class="buttons">
-                <button class="message">Contact Me</button>
-                <button class="resume">Resume</button>
+                <a href="mailto:shanetomonia@gmail.com" class="contact-btn">Contact Me</a>
+                <a class="btn content-download button-main button-scheme" href="/IMG/resume.pdf.pdf" download="Shane's Resume" >Download CV</a>
               </div>
             </section>
             
@@ -85,12 +97,19 @@
             </section>
             
              <!--Footer Section of Page-->
-            <footer id="Contact" class="Contact">
-             <h2>Don't be a Stranger</h2>
-             <p>I am always looking for new learning opportunities and experiences to that will expose me to real world expereriences.  Don't hesitate to reach out! </p>
-             <a href="mailto:shanetomonia@gmail.com" class="contact-btn">Contact Me</a>
+             
+             <footer id="Contact" class="Contact">
+              <h2>Don't be a Stranger</h2>
+              <p>I am always looking for new learning opportunities and experiences to that will expose me to real world experiences.  Don't hesitate to reach out! </p>
+              <div class="buttons-container">
+                <a href="mailto:shanetomonia@gmail.com" class="contact-btn">Contact Me</a>
+                <a class="return" href="#top"> Back To Top</a>
+              </div>
             </footer>
-            <a class="top" href="#top"> Back To Top</a>
+            
+            
+            
+          
 
     </body>
    </html>

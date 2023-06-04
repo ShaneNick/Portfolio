@@ -101,12 +101,13 @@ header {
 }
 
 .Intro p {
-  font-size: 37px;
+  font-size: 2em;  /* adjust as needed */
   color: gray;
-  width: 400px;
-  transform: translateY(-390px);
-  padding-left: 10px;
+  width: 90%;  /* adjust as needed */
+  transform: translateY(-5em);  /* adjust as needed */
+  padding-left: 1em;  /* adjust as needed */
 }
+
 
 .profile {
   display: flex;
@@ -137,11 +138,15 @@ header {
   padding-left: 50px;
 }
 
-.buttons button {
+.buttons a {
+  color: white;
+  background-color: hsl(157, 69%, 40%);
+  border-bottom: 2px solid hsl(157, 69%, 40%);
   margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 10px;
+  font-size: 25px;
   width: 150px;
+  text-align: center;
 }
 
 
@@ -152,35 +157,29 @@ header {
   margin-top: 13%;
   border-bottom: 2px solid hsl(157, 69%, 40%);
   border-top: 2px solid hsl(157, 69%, 40%);
-  min-height: 75vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #C9B9B2;
-  line-height: 2; /* Increase line spacing */
+  line-height: 2; 
 }
 
 .Hero h2 {
-  font-size: 60px; /* Increase font size */
-  padding-bottom: 20px;
+  font-size: 60px; 
   background-color: #C9B9B2;
 }
 
 .Hero p {
-  font-size: 24px; /* Increase font size */
+  font-size: 24px; 
   background-color: #C9B9B2;
   text-align: center;
 }
 
 
-
 /*Project section*/
 .Projects {
-  padding: 4%;
-  margin-top: 10%;
-  border-bottom: 2px solid hsl(157, 69%, 40%);
-  border-top: 2px solid hsl(157, 69%, 40%);
-  min-height: 50vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,8 +262,6 @@ button {
   margin-top: 20px;
 }
 
-
-
 /*Contact section*/
 .Contact {
   display: inline-block;
@@ -302,57 +299,149 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin-right: 10px;
+  font-size: 25px;
 }
 
-@media screen and (min-width:320px) {
-  .pfp {
-    padding: auto;
-    margin: auto;
-    align-items: auto;
-    height: fit-content;
+.return {
+  background-color: hsl(157, 69%, 40%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* For devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  /* Adjustments for the top navigation */
+  .top {
+    padding: 10px;
   }
-}
-
-@media screen and (min-width: 320px) {
-  .ducks {
-    width: 60vh;
-    max-width: 60vh;
-    margin: 0%;
+  
+  .top ul {
+    font-size: 20px;
+  }
+  
+  .top a {
+    width: 80px;
+    padding: 15px;
+  }
+  
+  /* Adjustments for the introduction section */
+  .Intro {
+    padding: 2%;
+    margin: 10px;
+    margin-top: 50px;
+  }
+  
+  .Intro h1 {
+    font-size: 40px;
+    transform: translateY(-80px);
+  }
+  
+  .Intro p {
+    font-size: 1.5em;
+    transform: translateY(-3em);
+    padding-left: 0.5em;
+  }
+  
+  /* Adjustments for the profile section */
+  .profile {
+    flex-direction: column;
     align-items: center;
-    border-radius: 8px;
   }
-}
-
-@media screen and (min-width: 320px) {
-
+  
+  .profile img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .pfp {
+    width: 300px;
+    height: 300px;
+    transform: translateY(-80px);
+  }
+  
+  .buttons {
+    top: 40%;
+    left: 30px;
+    transform: translateY(0px);
+    padding-left: 0;
+  }
+  
+  .buttons a {
+    font-size: 20px;
+    width: 120px;
+  }
+  
+  /* Adjustments for the hero section */
+  .Hero {
+    margin-top: 10%;
+  }
+  
+  .Hero h2 {
+    font-size: 40px;
+  }
+  
+  .Hero p {
+    font-size: 20px;
+  }
+  
+  /* Adjustments for the projects section */
+  .Projects h2 {
+    font-size: 40px;
+    padding: 2%;
+  }
+  
+  .ducks {
+    width: 80vh;
+    max-width: 80vh;
+  }
+  
   .osaka,
   .room1 {
-    width: 60vh;
-    display: inline-flex;
-    margin: 0%;
-    height: 340px;
-    align-items: stretch;
-    border-radius: 8px;
-
+    width: 80vh;
+    height: 240px;
   }
-
-  .container {
-
-    float: left;
-    display: inline;
-    align-items: center;
-    text-align: center;
+  
+  /* Adjustments for the contact section */
+  .Contact {
+    margin: 50px;
+    padding: 2%;
   }
-}
-
-
-@media screen and (min-width: 320px) {
-
-  .Intro,
-  .Hero,
-  .top .Contact {
-    padding: 3%;
-    margin: 1%;
+  
+  .Contact h2 {
+    width: 80%;
+    padding-bottom: 30px;
+    font-size: 40px;
+  }
+  
+  .Contact p {
+    width: 90%;
+    font-size: 20px;
+  }
+  
+  .Contact a {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  
+  .return {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
     align-items: center;
   }
 }
