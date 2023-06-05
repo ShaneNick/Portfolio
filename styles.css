@@ -373,7 +373,7 @@ button {
   .buttons {
     top: 40%;
     left: 30px;
-    transform: translateY(-10px);
+    transform: translateY(80px);
     padding-left: 0;
   }
   
