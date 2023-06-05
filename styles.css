@@ -154,7 +154,7 @@ header {
 /*Bio section*/
 .Hero {
   padding: 4%;
-  margin-top: 13%;
+  margin-top: 6%;
   border-bottom: 2px solid hsl(157, 69%, 40%);
   border-top: 2px solid hsl(157, 69%, 40%);
   min-height: 25vh;
@@ -216,7 +216,7 @@ header {
   color: #FFF;
   background-color: hsl(157, 69%, 40%);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
 }
 
