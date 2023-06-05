@@ -320,7 +320,7 @@ button {
 }
 
 /* For devices with a maximum width of 768px */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   /* Adjustments for the top navigation */
   .top {
     padding: 10px;
@@ -332,7 +332,6 @@ button {
   
   .top a {
     width: 80px;
-    padding: 15px;
   }
   
   /* Adjustments for the introduction section */
@@ -360,9 +359,9 @@ button {
   }
   
   .profile img {
-    margin-left: 0;
-    margin-bottom: 20px;
-    transform: translateY(-21px);
+    width: 200px;
+    transform: translateY(-7px);
+    margin-left: -20px;
   }
   
   .pfp {
@@ -374,7 +373,7 @@ button {
   .buttons {
     top: 40%;
     left: 30px;
-    transform: translateY(70px);
+    transform: translateY(-10px);
     padding-left: 0;
   }
   
@@ -448,6 +447,7 @@ button {
     align-items: center;
   }
 }
+
   .Contact {
     margin: 50px;
     padding: 2%;
